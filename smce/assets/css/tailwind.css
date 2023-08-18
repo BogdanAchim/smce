@@ -1117,7 +1117,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .border-primary {
   --tw-border-opacity: 1;
-  border-color: rgb(48 86 211 / var(--tw-border-opacity));
+  border-color: rgb(19 150 151 / var(--tw-border-opacity));
 }
 
 .border-\[\#D4DEFF\] {
@@ -1149,7 +1149,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(48 86 211 / var(--tw-bg-opacity));
+  background-color: rgb(19 150 151 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#f5f8ff\] {
@@ -1235,9 +1235,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .from-primary {
-  --tw-gradient-from: #3056d3;
+  --tw-gradient-from: rgb(19 150 151);
   --tw-gradient-stops: var(--tw-gradient-from),
-    var(--tw-gradient-to, rgb(48 86 211 / 0));
+    var(--tw-gradient-to, rgb(19 150 151 / 0));
 }
 
 .to-transparent {
@@ -1583,7 +1583,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-primary {
   --tw-text-opacity: 1;
-  color: rgb(48 86 211 / var(--tw-text-opacity));
+  color: rgb(19 150 151 / var(--tw-text-opacity));
 }
 
 .text-\[\#cdced6\] {
@@ -1688,7 +1688,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ring-primary {
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(48 86 211 / var(--tw-ring-opacity));
+  --tw-ring-color: rgb(19 150 151 / var(--tw-ring-opacity));
 }
 
 .grayscale {
@@ -1768,7 +1768,7 @@ body {
 
 .sticky #navbarCollapse li a:hover {
   --tw-text-opacity: 1;
-  color: rgb(48 86 211 / var(--tw-text-opacity));
+  color: rgb(19 150 151 / var(--tw-text-opacity));
   opacity: 1;
 }
 
@@ -1778,7 +1778,7 @@ body {
 
 .sticky #navbarCollapse li .ud-menu-scroll.active {
   --tw-text-opacity: 1;
-  color: rgb(48 86 211 / var(--tw-text-opacity));
+  color: rgb(19 150 151 / var(--tw-text-opacity));
   opacity: 1;
 }
 
@@ -1789,13 +1789,13 @@ body {
 
 .sticky .loginBtn:hover {
   --tw-text-opacity: 1;
-  color: rgb(48 86 211 / var(--tw-text-opacity));
+  color: rgb(19 150 151 / var(--tw-text-opacity));
   opacity: 1;
 }
 
 .sticky .signUpBtn {
   --tw-bg-opacity: 1;
-  background-color: rgb(48 86 211 / var(--tw-bg-opacity));
+  background-color: rgb(19 150 151 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -1890,7 +1890,7 @@ body {
 
 .hover\:border-primary:hover {
   --tw-border-opacity: 1;
-  border-color: rgb(48 86 211 / var(--tw-border-opacity));
+  border-color: rgb(19 150 151 / var(--tw-border-opacity));
 }
 
 .hover\:border-dark:hover {
@@ -1900,7 +1900,7 @@ body {
 
 .hover\:bg-primary:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(48 86 211 / var(--tw-bg-opacity));
+  background-color: rgb(19 150 151 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-dark:hover {
@@ -1918,7 +1918,7 @@ body {
 
 .hover\:text-primary:hover {
   --tw-text-opacity: 1;
-  color: rgb(48 86 211 / var(--tw-text-opacity));
+  color: rgb(19 150 151 / var(--tw-text-opacity));
 }
 
 .hover\:text-dark:hover {
@@ -1972,7 +1972,7 @@ body {
 
 .focus\:border-primary:focus {
   --tw-border-opacity: 1;
-  border-color: rgb(48 86 211 / var(--tw-border-opacity));
+  border-color: rgb(19 150 151 / var(--tw-border-opacity));
 }
 
 .focus\:outline-none:focus {
@@ -2020,7 +2020,7 @@ body {
 
 .group:hover .group-hover\:text-primary {
   --tw-text-opacity: 1;
-  color: rgb(48 86 211 / var(--tw-text-opacity));
+  color: rgb(19 150 151 / var(--tw-text-opacity));
 }
 
 .group:hover .group-hover\:opacity-100 {
