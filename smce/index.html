@@ -20,6 +20,65 @@
     <script>
       new WOW().init();
     </script>
+    
+    <!-- Custom CSS for Electrical Energy Animations -->
+    <style>
+      @keyframes currentFlow {
+        0% { transform: translateX(-100px); opacity: 0; }
+        10% { opacity: 0.8; }
+        90% { opacity: 0.8; }
+        100% { transform: translateX(calc(100vw + 100px)); opacity: 0; }
+      }
+      
+      @keyframes currentFlowReverse {
+        0% { transform: translateX(calc(100vw + 100px)); opacity: 0; }
+        10% { opacity: 0.8; }
+        90% { opacity: 0.8; }
+        100% { transform: translateX(-100px); opacity: 0; }
+      }
+      
+             @keyframes currentFlowDown {
+         0% { transform: translateY(-100px); opacity: 0; }
+         10% { opacity: 0.8; }
+         90% { opacity: 0.8; }
+         100% { transform: translateY(calc(100vh + 100px)); opacity: 0; }
+       }
+       
+       @keyframes currentFlowUp {
+         0% { transform: translateY(calc(100vh + 100px)); opacity: 0; }
+         10% { opacity: 0.8; }
+         90% { opacity: 0.8; }
+         100% { transform: translateY(-100px); opacity: 0; }
+       }
+      
+      @keyframes voltageWave {
+        0%, 100% { opacity: 0.3; transform: scaleX(1); }
+        50% { opacity: 0.6; transform: scaleX(1.2); }
+      }
+      
+      @keyframes electricalArc {
+        0%, 100% { opacity: 0.4; transform: scale(1); }
+        50% { opacity: 0.8; transform: scale(1.1); }
+      }
+      
+      @keyframes discharge {
+        0%, 100% { opacity: 0.6; transform: scaleY(1); }
+        50% { opacity: 1; transform: scaleY(1.2); }
+      }
+      
+      /* Ensure animations are visible */
+      .animate-ping {
+        animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+      }
+      
+      .animate-pulse {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      
+      .animate-bounce {
+        animation: bounce 1s infinite;
+      }
+    </style>
   </head>
   <body class="bg-gray-50">
     <!-- Navigation -->
@@ -74,43 +133,116 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600"></div>
-      <div class="absolute inset-0 bg-black/20"></div>
-      
-      <!-- Engineering background pattern -->
-      <div class="absolute inset-0 opacity-10">
-        <!-- Circuit board pattern -->
-        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, white 1px, transparent 1px), radial-gradient(circle at 75% 75%, white 1px, transparent 1px); background-size: 50px 50px;"></div>
-        
-        <!-- Technical grid lines -->
-        <div class="absolute inset-0" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 100px 100px;"></div>
-        
-        <!-- Engineering symbols -->
-        <div class="absolute top-20 left-20 text-white/20 text-6xl font-bold">⚡</div>
-        <div class="absolute top-32 right-32 text-white/20 text-5xl font-bold">🔌</div>
-        <div class="absolute bottom-32 left-1/3 text-white/20 text-4xl font-bold">⚙️</div>
-        <div class="absolute bottom-20 right-20 text-white/20 text-5xl font-bold">🔋</div>
-      </div>
-      
-      <!-- Enhanced floating background elements -->
-      <div class="absolute inset-0 overflow-hidden">
-        <div class="absolute top-20 left-10 w-20 h-20 bg-blue-400/20 rounded-full animate-pulse"></div>
-        <div class="absolute top-40 right-20 w-16 h-16 bg-blue-300/20 rounded-full animate-pulse delay-1000"></div>
-        <div class="absolute bottom-20 left-1/4 w-12 h-12 bg-blue-500/20 rounded-full animate-pulse delay-2000"></div>
-        
-        <!-- New floating geometric shapes -->
-        <div class="absolute top-32 left-1/3 w-8 h-8 bg-blue-300/30 rotate-45 animate-bounce delay-500"></div>
-        <div class="absolute top-64 right-1/4 w-6 h-6 bg-blue-400/25 rounded-full animate-ping delay-1500"></div>
-        <div class="absolute bottom-32 right-1/3 w-10 h-10 bg-blue-200/20 rotate-12 animate-pulse delay-3000"></div>
-        <div class="absolute top-1/2 left-20 w-4 h-4 bg-blue-300/40 rounded-full animate-bounce delay-2000"></div>
-        
-        <!-- Engineering-specific floating elements -->
-        <div class="absolute top-16 right-1/4 w-12 h-12 border-2 border-blue-300/30 rotate-45 animate-pulse delay-3000"></div>
-        <div class="absolute bottom-16 left-1/3 w-10 h-10 border-2 border-blue-400/30 rounded-full animate-bounce delay-1500"></div>
-        <div class="absolute top-1/3 right-16 w-8 h-8 bg-blue-500/20 transform rotate-12 animate-pulse delay-2500"></div>
-      </div>
+         <!-- Hero Section -->
+     <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+                               <!-- Electrical Energy Background -->
+         <div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600">
+           <!-- Power Grid Lines -->
+           <div class="absolute inset-0 opacity-20">
+             <!-- High voltage transmission lines -->
+             <div class="absolute top-1/6 left-0 w-full h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent opacity-60"></div>
+             <div class="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-400 to-transparent opacity-60"></div>
+             <div class="absolute top-5/6 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-400 to-transparent opacity-60"></div>
+             
+             <!-- Substation connections -->
+             <div class="absolute left-1/4 top-0 h-full w-1 bg-gradient-to-b from-transparent via-blue-400 to-transparent opacity-60"></div>
+             <div class="absolute left-3/4 top-0 h-full w-1 bg-gradient-to-b from-transparent via-cyan-400 to-transparent opacity-60"></div>
+           </div>
+           
+                       <!-- Flowing Electrical Current -->
+            <div class="absolute inset-0 overflow-hidden">
+              <!-- Current flow from left to right (Yellow high voltage line) -->
+              <div class="absolute top-1/6 left-0 w-2 h-1 bg-yellow-400 rounded-full opacity-80" style="animation: currentFlow 3s linear infinite;"></div>
+              <div class="absolute top-1/6 left-0 w-2 h-1 bg-yellow-400 rounded-full opacity-80" style="animation: currentFlow 3s linear infinite; animation-delay: 1s;"></div>
+              <div class="absolute top-1/6 left-0 w-2 h-1 bg-yellow-400 rounded-full opacity-80" style="animation: currentFlow 3s linear infinite; animation-delay: 2s;"></div>
+              
+              <!-- Current flow from right to left (Orange medium voltage line) -->
+              <div class="absolute top-1/2 right-0 w-2 h-1 bg-orange-400 rounded-full opacity-80" style="animation: currentFlowReverse 4s linear infinite;"></div>
+              <div class="absolute top-1/2 right-0 w-2 h-1 bg-orange-400 rounded-full opacity-80" style="animation: currentFlowReverse 4s linear infinite; animation-delay: 1.5s;"></div>
+              <div class="absolute top-1/2 right-0 w-2 h-1 bg-orange-400 rounded-full opacity-80" style="animation: currentFlowReverse 4s linear infinite; animation-delay: 3s;"></div>
+              
+              <!-- Current flow from top to bottom (Blue substation connection) -->
+              <div class="absolute top-0 left-1/4 w-1 h-2 bg-blue-400 rounded-full opacity-80" style="animation: currentFlowDown 5s linear infinite;"></div>
+              <div class="absolute top-0 left-1/4 w-1 h-2 bg-blue-400 rounded-full opacity-80" style="animation: currentFlowDown 5s linear infinite; animation-delay: 2.5s;"></div>
+              <div class="absolute top-0 left-1/4 w-1 h-2 bg-blue-400 rounded-full opacity-80" style="animation: currentFlowDown 5s linear infinite; animation-delay: 5s;"></div>
+              
+              <!-- Current flow from bottom to top (Cyan substation connection) -->
+              <div class="absolute bottom-0 left-3/4 w-1 h-2 bg-cyan-400 rounded-full opacity-80" style="animation: currentFlowUp 6s linear infinite;"></div>
+              <div class="absolute bottom-0 left-3/4 w-1 h-2 bg-cyan-400 rounded-full opacity-80" style="animation: currentFlowUp 6s linear infinite; animation-delay: 2s;"></div>
+              <div class="absolute bottom-0 left-3/4 w-1 h-2 bg-cyan-400 rounded-full opacity-80" style="animation: currentFlowUp 6s linear infinite; animation-delay: 4s;"></div>
+              
+              <!-- Current flow from left to right (Red high voltage line) -->
+              <div class="absolute top-5/6 left-0 w-2 h-1 bg-red-400 rounded-full opacity-80" style="animation: currentFlow 3.5s linear infinite;"></div>
+              <div class="absolute top-5/6 left-0 w-2 h-1 bg-red-400 rounded-full opacity-80" style="animation: currentFlow 3.5s linear infinite; animation-delay: 1.2s;"></div>
+              <div class="absolute top-5/6 left-0 w-2 h-1 bg-red-400 rounded-full opacity-80" style="animation: currentFlow 3.5s linear infinite; animation-delay: 2.4s;"></div>
+              
+              <!-- Diagonal current flows for more dynamic movement -->
+              <div class="absolute top-1/3 left-0 w-2 h-1 bg-indigo-400 rounded-full opacity-70 transform rotate-12" style="animation: currentFlow 4.5s linear infinite;"></div>
+              <div class="absolute top-1/3 left-0 w-2 h-1 bg-indigo-400 rounded-full opacity-70 transform rotate-12" style="animation: currentFlow 4.5s linear infinite; animation-delay: 2.2s;"></div>
+              
+              <div class="absolute top-2/3 right-0 w-2 h-1 bg-purple-400 rounded-full opacity-70 transform -rotate-12" style="animation: currentFlowReverse 5.5s linear infinite;"></div>
+              <div class="absolute top-2/3 right-0 w-2 h-1 bg-purple-400 rounded-full opacity-70 transform -rotate-12" style="animation: currentFlowReverse 5.5s linear infinite; animation-delay: 2.8s;"></div>
+            </div>
+           
+           <!-- Electrical Arcs and Sparks -->
+           <div class="absolute inset-0">
+             <!-- Substation arcs -->
+             <div class="absolute top-1/4 left-1/4 w-16 h-16">
+               <div class="absolute inset-0 border border-yellow-400/60 rounded-full animate-ping opacity-40"></div>
+               <div class="absolute inset-0 border border-yellow-400/40 rounded-full animate-ping opacity-30" style="animation-delay: 0.5s;"></div>
+               <div class="absolute inset-0 border border-yellow-400/20 rounded-full animate-ping opacity-20" style="animation-delay: 1s;"></div>
+             </div>
+             
+             <!-- Power plant arcs -->
+             <div class="absolute bottom-1/4 right-1/4 w-20 h-20">
+               <div class="absolute inset-0 border border-blue-400/60 rounded-full animate-ping opacity-40"></div>
+               <div class="absolute inset-0 border border-blue-400/40 rounded-full animate-ping opacity-30" style="animation-delay: 0.7s;"></div>
+               <div class="absolute inset-0 border border-blue-400/20 rounded-full animate-ping opacity-20" style="animation-delay: 1.4s;"></div>
+             </div>
+             
+             <!-- Transformer connections -->
+             <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24">
+               <div class="absolute inset-0 border border-cyan-400/60 rounded-full animate-ping opacity-40"></div>
+               <div class="absolute inset-0 border border-cyan-400/40 rounded-full animate-ping opacity-30" style="animation-delay: 0.3s;"></div>
+               <div class="absolute inset-0 border border-cyan-400/20 rounded-full animate-ping opacity-20" style="animation-delay: 0.6s;"></div>
+             </div>
+           </div>
+           
+           <!-- Voltage Fluctuations -->
+           <div class="absolute inset-0 overflow-hidden">
+             <!-- Voltage waves -->
+             <div class="absolute top-1/3 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-white to-transparent opacity-30 animate-pulse"></div>
+             <div class="absolute top-2/3 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-white to-transparent opacity-30 animate-pulse" style="animation-delay: 0.5s;"></div>
+             
+             <!-- Frequency oscillations -->
+             <div class="absolute left-1/3 top-0 h-full w-0.5 bg-gradient-to-b from-transparent via-white to-transparent opacity-30 animate-pulse"></div>
+             <div class="absolute left-2/3 top-0 h-full w-0.5 bg-gradient-to-b from-transparent via-white to-transparent opacity-30 animate-pulse" style="animation-delay: 0.3s;"></div>
+           </div>
+           
+           <!-- Electrical Discharges -->
+           <div class="absolute inset-0">
+             <!-- Lightning-like discharges -->
+             <div class="absolute top-1/6 left-1/6 w-1 h-8 bg-gradient-to-b from-transparent via-yellow-300 to-transparent opacity-60 animate-pulse"></div>
+             <div class="absolute top-1/3 right-1/3 w-1 h-6 bg-gradient-to-b from-transparent via-orange-300 to-transparent opacity-60 animate-pulse" style="animation-delay: 1s;"></div>
+             <div class="absolute bottom-1/3 left-2/3 w-1 h-10 bg-gradient-to-b from-transparent via-red-300 to-transparent opacity-60 animate-pulse" style="animation-delay: 2s;"></div>
+           </div>
+         </div>
+       
+               <!-- Dark overlay for better text readability -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-blue-800/50 to-blue-600/60"></div>
+        <div class="absolute inset-0 bg-black/30"></div>
+       
+       <!-- Subtle engineering overlay pattern -->
+       <div class="absolute inset-0 opacity-5">
+         <div class="absolute inset-0" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 100px 100px;"></div>
+       </div>
+       
+       <!-- Subtle floating elements for depth -->
+       <div class="absolute inset-0 overflow-hidden">
+         <div class="absolute top-20 left-10 w-16 h-16 bg-blue-400/10 rounded-full animate-pulse"></div>
+         <div class="absolute top-40 right-20 w-12 h-12 bg-blue-300/10 rounded-full animate-pulse delay-1000"></div>
+         <div class="absolute bottom-20 left-1/4 w-8 h-8 bg-blue-500/10 rounded-full animate-pulse delay-2000"></div>
+       </div>
       
       <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
         <h1 class="text-5xl md:text-7xl font-bold mb-6 wow fadeInUp" data-wow-delay="0.2s">
@@ -641,90 +773,6 @@
           </div>
         </div>
 
-        <!-- ABB Worldwide Projects -->
-        <div class="mb-12 wow fadeInUp" data-wow-delay="0.3s">
-          <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border-2 border-blue-200 shadow-lg">
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h4 class="text-xl font-bold mb-6 text-blue-600">ABB Worldwide</h4>
-                <p class="text-gray-600 mb-6">Major ABB projects across multiple continents.</p>
-                <h5 class="text-lg font-semibold mb-4">Projects:</h5>
-                                 <ul class="space-y-3 text-gray-600">
-                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
-                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                       <i class="fas fa-check text-green-600 text-sm"></i>
-                     </div>
-                     <span class="text-gray-700 font-medium px-2">400kV KORMALA - IRAK - COMMISSIONING MANAGEMENT - Guide the commissioning team of the final client, KAR GROUP</span>
-                   </li>
-                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
-                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                       <i class="fas fa-check text-green-600 text-sm"></i>
-                     </div>
-                     <span class="text-gray-700 font-medium px-2">132kV DREVATTEN - NORWAY</span>
-                   </li>
-                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
-                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                       <i class="fas fa-check text-green-600 text-sm"></i>
-                     </div>
-                     <span class="text-gray-700 font-medium px-2">400kV ERBIL CCPP - IRAK</span>
-                   </li>
-                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
-                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                       <i class="fas fa-check text-green-600 text-sm"></i>
-                     </div>
-                     <span class="text-gray-700 font-medium px-2">400kV AMARRA EXTENSION - IRAK: FAT ONLY</span>
-                   </li>
-                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
-                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                       <i class="fas fa-check text-green-600 text-sm"></i>
-                     </div>
-                     <span class="text-gray-700 font-medium px-2">132kV MGI STEEL - IRAK: FAT ONLY</span>
-                   </li>
-                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
-                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                       <i class="fas fa-check text-green-600 text-sm"></i>
-                     </div>
-                     <span class="text-gray-700 font-medium px-2">220kV PANAMA2: FAT ONLY</span>
-                   </li>
-                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
-                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                       <i class="fas fa-check text-green-600 text-sm"></i>
-                     </div>
-                     <span class="text-gray-700 font-medium px-2">220kV ALTO MOLOCUE - MOZAMBIQ: FAT ONLY</span>
-                   </li>
-                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
-                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                       <i class="fas fa-check text-green-600 text-sm"></i>
-                     </div>
-                     <span class="text-gray-700 font-medium px-2">220kV QUELIMANE - MOZAMBIQ: FAT ONLY</span>
-                   </li>
-                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
-                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                       <i class="fas fa-check text-green-600 text-sm"></i>
-                     </div>
-                     <span class="text-gray-700 font-medium px-2">220kV CHIMUARA - MOZAMBIQ: FAT ONLY</span>
-                   </li>
-                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
-                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                       <i class="fas fa-check text-green-600 text-sm"></i>
-                     </div>
-                     <span class="text-gray-700 font-medium px-2">110kV BLACK LION - MOZAMBIQ: FAT ONLY</span>
-                   </li>
-                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
-                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                       <i class="fas fa-check text-green-600 text-sm"></i>
-                     </div>
-                     <span class="text-gray-700 font-medium px-2">220kV SYNCHRONUS COMPENSATOR, COMMISSIONING OF THE EXCITATION SYSTEM KOLWEZI DRC</span>
-                   </li>
-                 </ul>
-              </div>
-              <div class="flex items-center justify-center">
-                <img src="assets/images/references/abb_ww.jpg" alt="ABB Worldwide Projects" class="rounded-lg max-w-full h-auto shadow-lg" />
-              </div>
-            </div>
-          </div>
-        </div>
-
         <!-- SAE Botswana Projects -->
         <div class="mb-12 wow fadeInUp" data-wow-delay="0.35s">
           <div class="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl p-8 border-2 border-emerald-200 shadow-lg">
@@ -821,37 +869,147 @@
           </div>
         </div>
 
-        <!-- Toshiba Europe Projects -->
-        <div class="mb-12 wow fadeInUp" data-wow-delay="0.5s">
-          <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border-2 border-purple-200 shadow-lg">
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h4 class="text-xl font-bold mb-6 text-purple-600">Toshiba Europe</h4>
-                <p class="text-gray-600 mb-6">Toshiba projects across Europe.</p>
-                <h5 class="text-lg font-semibold mb-4">Projects:</h5>
-                                 <ul class="space-y-3 text-gray-600">
-                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
-                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                       <i class="fas fa-check text-green-600 text-sm"></i>
+                 <!-- Toshiba Europe Projects -->
+         <div class="mb-12 wow fadeInUp" data-wow-delay="0.5s">
+           <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border-2 border-purple-200 shadow-lg">
+             <div class="grid md:grid-cols-2 gap-8 items-center">
+               <div>
+                 <h4 class="text-xl font-bold mb-6 text-purple-600">Toshiba Europe</h4>
+                 <p class="text-gray-600 mb-6">Toshiba projects across Europe.</p>
+                 <h5 class="text-lg font-semibold mb-4">Projects:</h5>
+                                  <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                      <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                        <i class="fas fa-check text-green-600 text-sm"></i>
+                      </div>
+                      <span class="text-gray-700 font-medium px-2">DC LINK KOTOR (MONTENEGRO) - CEPAGATTI (ITALY): on italian side.</span>
+                    </li>
+                    <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                      <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                        <i class="fas fa-check text-green-600 text-sm"></i>
+                      </div>
+                      <span class="text-gray-700 font-medium px-2">110/20kV HOGHIZ, ROMANIA</span>
+                    </li>
+                  </ul>
+               </div>
+               <div class="flex items-center justify-center">
+                 <img src="assets/images/references/toshiba_europe.jpg" alt="Toshiba Europe Projects" class="rounded-lg max-w-full h-auto shadow-lg" />
+               </div>
+             </div>
+           </div>
+         </div>
+
+         <!-- ABB Worldwide Projects -->
+         <div class="mb-12 wow fadeInUp" data-wow-delay="0.3s">
+           <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border-2 border-blue-200 shadow-lg">
+             <div class="text-center mb-8">
+               <h4 class="text-2xl font-bold mb-4 text-blue-600">ABB Worldwide Projects</h4>
+               <p class="text-gray-600">Major ABB projects across multiple continents including Iraq, Norway, Panama, Mozambique, and DR Congo.</p>
+             </div>
+             
+             <div class="grid md:grid-cols-3 gap-6 mb-8">
+               <!-- Iraq & Middle East Projects Column -->
+               <div class="bg-white/40 rounded-xl p-6 backdrop-blur-sm">
+                 <h5 class="text-lg font-semibold mb-4 text-blue-700 flex items-center">
+                   <i class="mr-2"></i>Iraq & Middle East
+                 </h5>
+                 <ul class="space-y-2 text-gray-600">
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
                      </div>
-                     <span class="text-gray-700 font-medium px-2">DC LINK KOTOR (MONTENEGRO) - CEPAGATTI (ITALY): on italian side.</span>
+                     <span class="text-gray-700 text-sm">400kV KORMALA - COMMISSIONING MANAGEMENT</span>
                    </li>
-                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
-                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                       <i class="fas fa-check text-green-600 text-sm"></i>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
                      </div>
-                     <span class="text-gray-700 font-medium px-2">110/20kV HOGHIZ, ROMANIA</span>
+                     <span class="text-gray-700 text-sm">400kV ERBIL CCPP</span>
+                   </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">400kV AMARRA EXTENSION: FAT ONLY</span>
+                   </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">132kV MGI STEEL: FAT ONLY</span>
                    </li>
                  </ul>
-              </div>
-              <div class="flex items-center justify-center">
-                <img src="assets/images/references/toshiba_europe.jpg" alt="Toshiba Europe Projects" class="rounded-lg max-w-full h-auto shadow-lg" />
-              </div>
-            </div>
-          </div>
-        </div>
+               </div>
+               
+               <!-- Europe & Americas Projects Column -->
+               <div class="bg-white/40 rounded-xl p-6 backdrop-blur-sm">
+                 <h5 class="text-lg font-semibold mb-4 text-blue-700 flex items-center">
+                   <i class="mr-2"></i>Europe & Americas
+                 </h5>
+                 <ul class="space-y-2 text-gray-600">
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">132kV DREVATTEN - NORWAY</span>
+                   </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">220kV PANAMA2: FAT ONLY</span>
+                   </li>
+                 </ul>
+               </div>
+               
+               <!-- Africa Projects Column -->
+               <div class="bg-white/40 rounded-xl p-6 backdrop-blur-sm">
+                 <h5 class="text-lg font-semibold mb-4 text-blue-700 flex items-center">
+                   <i class="mr-2"></i>Africa Projects
+                 </h5>
+                 <ul class="space-y-2 text-gray-600">
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">220kV ALTO MOLOCUE - MOZAMBIQ: FAT ONLY</span>
+                   </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">220kV QUELIMANE - MOZAMBIQ: FAT ONLY</span>
+                   </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">220kV CHIMUARA - MOZAMBIQ: FAT ONLY</span>
+                   </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">110kV BLACK LION - MOZAMBIQ: FAT ONLY</span>
+                   </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">220kV SYNCHRONUS COMPENSATOR - KOLWEZI DRC</span>
+                   </li>
+                 </ul>
+               </div>
+             </div>
+             
+             <!-- ABB Worldwide Image at the bottom
+             <div class="text-center">
+               <img src="assets/images/references/abb_ww.jpg" alt="ABB Worldwide Projects" class="rounded-lg max-w-md h-auto shadow-lg mx-auto" />
+             </div> -->
+           </div>
+         </div>
 
-                 <!-- Siemens Projects -->
+          <!-- Siemens Projects -->
          <div class="mb-12 wow fadeInUp" data-wow-delay="0.55s">
            <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border-2 border-green-200 shadow-lg">
              <div class="text-center mb-8">
@@ -997,9 +1155,9 @@
              </div>
              
              <!-- Siemens Image at the bottom -->
-             <div class="text-center">
+             <!-- <div class="text-center">
                <img src="assets/images/references/siemens.jpg" alt="Siemens Projects" class="rounded-lg max-w-md h-auto shadow-lg mx-auto" />
-             </div>
+             </div> -->
            </div>
          </div>
       </div>
