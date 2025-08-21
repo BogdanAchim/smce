@@ -79,6 +79,21 @@
       <div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600"></div>
       <div class="absolute inset-0 bg-black/20"></div>
       
+      <!-- Engineering background pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <!-- Circuit board pattern -->
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, white 1px, transparent 1px), radial-gradient(circle at 75% 75%, white 1px, transparent 1px); background-size: 50px 50px;"></div>
+        
+        <!-- Technical grid lines -->
+        <div class="absolute inset-0" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 100px 100px;"></div>
+        
+        <!-- Engineering symbols -->
+        <div class="absolute top-20 left-20 text-white/20 text-6xl font-bold">⚡</div>
+        <div class="absolute top-32 right-32 text-white/20 text-5xl font-bold">🔌</div>
+        <div class="absolute bottom-32 left-1/3 text-white/20 text-4xl font-bold">⚙️</div>
+        <div class="absolute bottom-20 right-20 text-white/20 text-5xl font-bold">🔋</div>
+      </div>
+      
       <!-- Enhanced floating background elements -->
       <div class="absolute inset-0 overflow-hidden">
         <div class="absolute top-20 left-10 w-20 h-20 bg-blue-400/20 rounded-full animate-pulse"></div>
@@ -90,6 +105,11 @@
         <div class="absolute top-64 right-1/4 w-6 h-6 bg-blue-400/25 rounded-full animate-ping delay-1500"></div>
         <div class="absolute bottom-32 right-1/3 w-10 h-10 bg-blue-200/20 rotate-12 animate-pulse delay-3000"></div>
         <div class="absolute top-1/2 left-20 w-4 h-4 bg-blue-300/40 rounded-full animate-bounce delay-2000"></div>
+        
+        <!-- Engineering-specific floating elements -->
+        <div class="absolute top-16 right-1/4 w-12 h-12 border-2 border-blue-300/30 rotate-45 animate-pulse delay-3000"></div>
+        <div class="absolute bottom-16 left-1/3 w-10 h-10 border-2 border-blue-400/30 rounded-full animate-bounce delay-1500"></div>
+        <div class="absolute top-1/3 right-16 w-8 h-8 bg-blue-500/20 transform rotate-12 animate-pulse delay-2500"></div>
       </div>
       
       <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
@@ -141,41 +161,42 @@
           </p>
         </div>
         
-        <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
-          <div class="wow fadeInLeft">
-            <img src="assets/images/about/about.jpg" alt="SMCE Team" class="rounded-2xl shadow-2xl" />
+        <!-- Featured Image Section -->
+        <div class="mb-16 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="relative">
+            <img src="assets/images/about/about.jpg" alt="SMCE Team" class="w-full h-96 object-cover rounded-3xl shadow-2xl" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-3xl"></div>
+            <div class="absolute bottom-8 left-8 text-white">
+              <h3 class="text-2xl font-bold mb-2">Engineering Excellence Since 2008</h3>
+              <p class="text-lg opacity-90">Delivering world-class electrical infrastructure solutions</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Core Values Grid -->
+        <div class="grid md:grid-cols-3 gap-8 mb-16 wow fadeInUp" data-wow-delay="0.4s">
+          <div class="text-center p-8 bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-200">
+            <div class="w-20 h-20 bg-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+              <i class="fas fa-bullseye text-white text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Our Mission</h3>
+            <p class="text-gray-600 leading-relaxed">Our mission is to fill the need for commissioning resources, often expressed by the leading profile companies and to support their project managers to complete their projects in a best possible way.</p>
           </div>
           
-          <div class="space-y-6 wow fadeInRight">
-            <div class="flex items-start space-x-4 p-6 bg-gradient-to-r from-purple-50 to-purple-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <div class="flex-shrink-0 w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center">
-                <i class="fas fa-bullseye text-white text-2xl"></i>
-              </div>
-              <div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">Our Mission</h3>
-                <p class="text-gray-600">Our mission is to fill the need for commissioning resources, often expressed by the leading profile companies and to support their project managers to complete their projects in a best possible way.</p>
-              </div>
+          <div class="text-center p-8 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-green-200">
+            <div class="w-20 h-20 bg-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+              <i class="fas fa-handshake text-white text-3xl"></i>
             </div>
-            
-            <div class="flex items-start space-x-4 p-6 bg-gradient-to-r from-green-50 to-green-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <div class="flex-shrink-0 w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center">
-                <i class="fas fa-handshake text-white text-2xl"></i>
-              </div>
-              <div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">Our Approach</h3>
-                <p class="text-gray-600">Mindful of the need to establish collaborations based on the freedom to work together in a mutually satisfactory way, we set up win-win relationships with our customers and our partners or employees.</p>
-              </div>
-            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Our Approach</h3>
+            <p class="text-gray-600 leading-relaxed">Mindful of the need to establish collaborations based on the freedom to work together in a mutually satisfactory way, we set up win-win relationships with our customers and our partners or employees.</p>
+          </div>
 
-            <div class="flex items-start space-x-4 p-6 bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <div class="flex-shrink-0 w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center">
-                <i class="fas fa-lightbulb text-white text-2xl"></i>
-              </div>
-              <div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">Our Dream</h3>
-                <p class="text-gray-600">Our dream is to create a large team of professionals, able to work together, to support each other, and lastly to be able to guide and grow, to share our knowledge with new generations of engineers.</p>
-              </div>
+          <div class="text-center p-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-200">
+            <div class="w-20 h-20 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+              <i class="fas fa-lightbulb text-white text-3xl"></i>
             </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Our Dream</h3>
+            <p class="text-gray-600 leading-relaxed">Our dream is to create a large team of professionals, able to work together, to support each other, and lastly to be able to guide and grow, to share our knowledge with new generations of engineers.</p>
           </div>
         </div>
 
@@ -213,38 +234,38 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 wow fadeInUp">
-            Why Choose SMCE GROUP T&D?
+            Engineering Excellence Metrics
           </h2>
           <p class="text-lg text-gray-600 max-w-2xl mx-auto wow fadeInUp" data-wow-delay="0.2s">
-            Our track record speaks for itself - delivering excellence across continents
+            Quantified results from our global engineering operations
           </p>
         </div>
         
         <div class="grid md:grid-cols-4 gap-8">
           <div class="text-center group wow fadeInUp" data-wow-delay="0.1s">
             <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-xl">
-              <i class="fas fa-globe text-white text-3xl"></i>
+              <i class="fas fa-satellite-dish text-white text-3xl"></i>
             </div>
             <div class="text-3xl font-bold text-blue-600 mb-2 group-hover:text-blue-700 transition-colors duration-300">15+</div>
             <div class="text-gray-700 font-semibold">Countries Served</div>
-            <div class="text-sm text-gray-500 mt-1">Across 5 continents</div>
+            <div class="text-sm text-gray-500 mt-1">Cross-continental operations</div>
           </div>
           
           <div class="text-center group wow fadeInUp" data-wow-delay="0.2s">
             <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-xl">
-              <i class="fas fa-bolt text-white text-3xl"></i>
+              <i class="fas fa-microchip text-white text-3xl"></i>
             </div>
             <div class="text-3xl font-bold text-green-600 mb-2 group-hover:text-green-700 transition-colors duration-300">60+</div>
-            <div class="text-gray-700 font-semibold">Projects Completed</div>
+            <div class="text-gray-700 font-semibold">Infrastructure Projects</div>
             <div class="text-sm text-gray-500 mt-1">High-voltage substations</div>
           </div>
           
           <div class="text-center group wow fadeInUp" data-wow-delay="0.3s">
             <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-xl">
-              <i class="fas fa-clock text-white text-3xl"></i>
+              <i class="fas fa-cogs text-white text-3xl"></i>
             </div>
             <div class="text-3xl font-bold text-purple-600 mb-2 group-hover:text-purple-700 transition-colors duration-300">15</div>
-            <div class="text-gray-700 font-semibold">Years Experience</div>
+            <div class="text-gray-700 font-semibold">Years Operational</div>
             <div class="text-sm text-gray-500 mt-1">Since 2008</div>
           </div>
           
@@ -253,7 +274,7 @@
               <i class="fas fa-shield-alt text-white text-3xl"></i>
             </div>
             <div class="text-3xl font-bold text-orange-600 mb-2 group-hover:text-orange-700 transition-colors duration-300">100%</div>
-            <div class="text-gray-700 font-semibold">Safety Record</div>
+            <div class="text-gray-700 font-semibold">Safety Compliance</div>
             <div class="text-sm text-gray-500 mt-1">Zero incidents</div>
           </div>
         </div>
@@ -265,10 +286,10 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 wow fadeInUp">
-            Our Core Services
+            Core Engineering Services
           </h2>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto wow fadeInUp" data-wow-delay="0.2s">
-            We provide comprehensive engineering and commissioning services for electrical power systems worldwide, specializing in protection systems, transmission & distribution, and power generation.
+            Specialized technical solutions for electrical power systems and infrastructure development
           </p>
         </div>
         
@@ -278,40 +299,41 @@
             <div class="absolute top-0 right-0 w-32 h-32 bg-blue-200 rounded-full -translate-y-16 translate-x-16 opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
             <div class="relative z-10">
               <div class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 mx-auto">
-                <i class="fas fa-cogs text-white text-2xl"></i>
+                <i class="fas fa-microchip text-white text-2xl"></i>
               </div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-4">Engineering of Control & Protection Terminals</h3>
-              <p class="text-gray-700 mb-6 leading-relaxed">One of our core activities in the area of engineering is to provide relay or system configurations. We are able to deal with most of the common protection devices such as Siemens, ABB, AREVA, GE.</p>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Protection System Engineering</h3>
+              <p class="text-gray-700 mb-6 leading-relaxed">Advanced relay configuration and system integration for electrical protection networks. Expertise in Siemens, ABB, AREVA, and GE protection devices.</p>
+              <h4 class="text-lg font-semibold text-gray-800 mb-3">Technical Capabilities:</h4>
               <div class="space-y-3">
                 <div class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
                   <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
                     <i class="fas fa-check text-green-600 text-sm"></i>
                   </div>
-                  <span class="text-gray-700 font-medium px-2">Line distance and differential protection</span>
+                  <span class="text-gray-700 font-medium px-2">Line distance & differential protection</span>
                 </div>
                 <div class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
                   <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
                     <i class="fas fa-check text-green-600 text-sm"></i>
                   </div>
-                  <span class="text-gray-700 font-medium px-2">Differential protection of transformers</span>
+                  <span class="text-gray-700 font-medium px-2">Transformer differential protection</span>
                 </div>
                 <div class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
                   <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
                     <i class="fas fa-check text-green-600 text-sm"></i>
                   </div>
-                  <span class="text-gray-700 font-medium px-2">Busbar protection</span>
+                  <span class="text-gray-700 font-medium px-2">Busbar protection systems</span>
                 </div>
                 <div class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
                   <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
                     <i class="fas fa-check text-green-600 text-sm"></i>
                   </div>
-                  <span class="text-gray-700 font-medium px-2">Breaker management devices</span>
+                  <span class="text-gray-700 font-medium px-2">Breaker management integration</span>
                 </div>
                 <div class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
                   <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
                     <i class="fas fa-check text-green-600 text-sm"></i>
                   </div>
-                  <span class="text-gray-700 font-medium px-2">Generator protections</span>
+                  <span class="text-gray-700 font-medium px-2">Generator protection schemes</span>
                 </div>
               </div>
             </div>
@@ -324,26 +346,27 @@
               <div class="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 mx-auto">
                 <i class="fas fa-tools text-white text-2xl"></i>
               </div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-4">Commissioning of Primary & Secondary Equipment</h3>
-              <p class="text-gray-700 mb-6 leading-relaxed">Our commissioning engineers are always aiming to reduce the risk of a project becoming delayed or running out of the budget. If we can find solutions, either on factory (during FAT), or on site (during SAT) we will implement them as fast as possible.</p>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Equipment Commissioning</h3>
+              <p class="text-gray-700 mb-6 leading-relaxed">Comprehensive commissioning services for primary and secondary electrical equipment. Risk mitigation through proactive problem-solving during FAT and SAT phases.</p>
+              <h4 class="text-lg font-semibold text-gray-800 mb-3">Commissioning Services:</h4>
               <div class="space-y-3">
                 <div class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
                   <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
                     <i class="fas fa-check text-green-600 text-sm"></i>
                   </div>
-                  <span class="text-gray-700 font-medium px-2">Field commissioning</span>
+                  <span class="text-gray-700 font-medium px-2">Field commissioning operations</span>
                 </div>
                 <div class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
                   <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
                     <i class="fas fa-check text-green-600 text-sm"></i>
                   </div>
-                  <span class="text-gray-700 font-medium px-2">Protection system commissioning</span>
+                  <span class="text-gray-700 font-medium px-2">Protection system validation</span>
                 </div>
                 <div class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
                   <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
                     <i class="fas fa-check text-green-600 text-sm"></i>
                   </div>
-                  <span class="text-gray-700 font-medium px-2">Commissioning of primary equipment</span>
+                  <span class="text-gray-700 font-medium px-2">Primary equipment testing</span>
                 </div>
               </div>
             </div>
@@ -354,10 +377,37 @@
             <div class="absolute top-0 right-0 w-32 h-32 bg-purple-200 rounded-full -translate-y-16 translate-x-16 opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
             <div class="relative z-10">
               <div class="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 mx-auto">
-                <i class="fas fa-building text-white text-2xl"></i>
+                <i class="fas fa-hard-hat text-white text-2xl"></i>
               </div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-4">Site Management</h3>
-              <p class="text-gray-700 mb-6 leading-relaxed">Our experience allows us to take the responsibility of building the site on time, at the highest standards, following the design and contributing with our own know how. We had similar experience in few places in Africa, dealing with local man power, renting cranes, oil treatment machines, etc. When the instalation work is done, we can go ahead with the commissioning. One man from the beginning to the end, an ideal solution for slow going projects in difficult countries.</p>
+                             <h3 class="text-2xl font-bold text-gray-900 mb-4">Project Site Management</h3>
+               <p class="text-gray-700 mb-6 leading-relaxed">End-to-end project management from site construction to commissioning. Specialized experience in challenging environments across Africa and developing regions.</p>
+               <h4 class="text-lg font-semibold text-gray-800 mb-3">Management Services:</h4>
+               <div class="space-y-3">
+                 <div class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                   <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                     <i class="fas fa-check text-green-600 text-sm"></i>
+                   </div>
+                   <span class="text-gray-700 font-medium px-2">Site construction oversight</span>
+                 </div>
+                 <div class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                   <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                     <i class="fas fa-check text-green-600 text-sm"></i>
+                   </div>
+                   <span class="text-gray-700 font-medium px-2">Equipment procurement & logistics</span>
+                 </div>
+                 <div class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                   <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                     <i class="fas fa-check text-green-600 text-sm"></i>
+                   </div>
+                   <span class="text-gray-700 font-medium px-2">Local workforce coordination</span>
+                 </div>
+                 <div class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                   <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                     <i class="fas fa-check text-green-600 text-sm"></i>
+                   </div>
+                   <span class="text-gray-700 font-medium px-2">Commissioning execution</span>
+                 </div>
+               </div>
             </div>
           </div>
         </div>
@@ -369,10 +419,10 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 wow fadeInUp">
-            Our Projects
+            Global Infrastructure Portfolio
           </h2>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto wow fadeInUp" data-wow-delay="0.2s">
-            Explore our worldwide projects across multiple countries and industries.
+            Comprehensive project portfolio spanning high-voltage transmission networks, substation infrastructure, and power generation facilities across multiple continents.
           </p>
         </div>
         
@@ -389,32 +439,44 @@
                 <h4 class="text-xl font-bold mb-6 text-blue-600 group-hover:text-blue-700 transition-colors duration-300">ABB Qatar Phase VII</h4>
                 <p class="text-gray-600 mb-6">Major ABB Phase VII projects including 6 substations across Qatar.</p>
                 <h5 class="text-lg font-semibold mb-4">Projects:</h5>
-                <ul class="space-y-4 text-gray-600">
-                  <li class="flex items-center group/item hover:bg-blue-50 p-2 rounded-lg transition-all duration-200">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-200"></i>
-                    <span class="leading-relaxed">400kV s/s ABU NAKHLA SUPER</span>
-                  </li>
-                  <li class="flex items-center group/item hover:bg-blue-50 p-2 rounded-lg transition-all duration-200">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-200"></i>
-                    <span class="leading-relaxed">400kV s/s DUCAN ROAD SUPER</span>
-                  </li>
-                  <li class="flex items-center group/item hover:bg-blue-50 p-2 rounded-lg transition-all duration-200">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-200"></i>
-                    <span class="leading-relaxed">220kV s/s DOHA SOUTH SUPER (DSS)</span>
-                  </li>
-                  <li class="flex items-center group/item hover:bg-blue-50 p-2 rounded-lg transition-all duration-200">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-200"></i>
-                    <span class="leading-relaxed">220kV s/s DOHA NORTH SUPER (DNS)</span>
-                  </li>
-                  <li class="flex items-center group/item hover:bg-blue-50 p-2 rounded-lg transition-all duration-200">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-200"></i>
-                    <span class="leading-relaxed">220kV s/s RAS LAFFAN</span>
-                  </li>
-                  <li class="flex items-center group/item hover:bg-blue-50 p-2 rounded-lg transition-all duration-200">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-200"></i>
-                    <span class="leading-relaxed">110kV TRANSFORMERS PROTECTION TEST ON SHELL INDUSTRIAL PLANT, RAS LAFFAN</span>
-                  </li>
-                </ul>
+                                 <ul class="space-y-3 text-gray-600">
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">400kV s/s ABU NAKHLA SUPER</span>
+                   </li>
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">400kV s/s DUCAN ROAD SUPER</span>
+                   </li>
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">220kV s/s DOHA SOUTH SUPER (DSS)</span>
+                   </li>
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">220kV s/s DOHA NORTH SUPER (DNS)</span>
+                   </li>
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">220kV s/s RAS LAFFAN</span>
+                   </li>
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">110kV TRANSFORMERS PROTECTION TEST ON SHELL INDUSTRIAL PLANT, RAS LAFFAN</span>
+                   </li>
+                 </ul>
               </div>
               <div class="flex items-center justify-center">
                 <img src="assets/images/references/abb_qatar.jpg" alt="ABB Qatar Projects" class="rounded-lg max-w-full h-auto shadow-lg group-hover:shadow-2xl transition-all duration-500" />
@@ -434,20 +496,26 @@
                 <h4 class="text-xl font-bold mb-6 text-blue-600">ABB DR Congo</h4>
                 <p class="text-gray-600 mb-6">3 major substation projects in DR Congo with ABB.</p>
                 <h5 class="text-lg font-semibold mb-4">Projects:</h5>
-                <ul class="space-y-4 text-gray-600">
-                  <li class="flex items-start">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">220kV s/s N'SEKE</span>
-                  </li>
-                  <li class="flex items-start">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">220kV s/s SCK KOLWEZI</span>
-                  </li>
-                  <li class="flex items-start">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">220kV s/s FUNGURUME</span>
-                  </li>
-                </ul>
+                                 <ul class="space-y-3 text-gray-600">
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">220kV s/s N'SEKE</span>
+                   </li>
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">220kV s/s SCK KOLWEZI</span>
+                   </li>
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">220kV s/s FUNGURUME</span>
+                   </li>
+                 </ul>
               </div>
             </div>
           </div>
@@ -461,18 +529,24 @@
                 <h4 class="text-xl font-bold mb-6 text-red-600">Ansaldo Tunisia</h4>
                 <p class="text-gray-600 mb-6">3 major Ansaldo projects in Tunisia.</p>
                 <h5 class="text-lg font-semibold mb-4">Projects:</h5>
-                <ul class="space-y-4 text-gray-600">
-                  <li class="flex items-start">
-                    <i class="fas fa-check-circle text-red-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">220kV s/s BOUCHEMA</span>
+                <ul class="space-y-3 text-gray-600">
+                  <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <i class="fas fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium px-2">220kV s/s BOUCHEMA</span>
                   </li>
-                  <li class="flex items-start">
-                    <i class="fas fa-check-circle text-red-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">220kV s/s SIDI MANSOUR</span>
+                  <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <i class="fas fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium px-2">220kV s/s SIDI MANSOUR</span>
                   </li>
-                  <li class="flex items-start">
-                    <i class="fas fa-check-circle text-red-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">90kV s/s MIDOUN</span>
+                  <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <i class="fas fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium px-2">90kV s/s MIDOUN</span>
                   </li>
                 </ul>
               </div>
@@ -491,50 +565,72 @@
                 <h4 class="text-xl font-bold mb-6 text-blue-600">ABB Sweden</h4>
                 <p class="text-gray-600 mb-6">11 major ABB projects across Sweden.</p>
                 <h5 class="text-lg font-semibold mb-4">Projects:</h5>
-                <ul class="space-y-4 text-gray-600">
-                  <li class="flex items-start">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">400kV STORFINNFORSEN</span>
+                <ul class="space-y-3 text-gray-600">
+                  <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <i class="fas fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium px-2">400kV STORFINNFORSEN</span>
                   </li>
-                  <li class="flex items-start">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">400kV HURVA</span>
+                  <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <i class="fas fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium px-2">400kV HURVA</span>
                   </li>
-                  <li class="flex items-start">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">400kV RABACKEN: FAT ONLY</span>
+                  <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <i class="fas fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium px-2">400kV RABACKEN: FAT ONLY</span>
                   </li>
-                  <li class="flex items-start">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">400kV BLAIKEN</span>
+                  <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <i class="fas fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium px-2">400kV BLAIKEN</span>
                   </li>
-                  <li class="flex items-start">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">400kV SEGE</span>
+                  <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <i class="fas fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium px-2">400kV SEGE</span>
                   </li>
-                  <li class="flex items-start">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">400kV HOGNAS</span>
+                  <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <i class="fas fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium px-2">400kV HOGNAS</span>
                   </li>
-                  <li class="flex items-start">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">400kV DJUPTIAN</span>
+                  <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <i class="fas fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium px-2">400kV DJUPTIAN</span>
                   </li>
-                  <li class="flex items-start">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">400kV RABACKEN EXTENSION 3</span>
+                  <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <i class="fas fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium px-2">400kV RABACKEN EXTENSION 3</span>
                   </li>
-                  <li class="flex items-start">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">220kV JARVA: FAT ONLY</span>
+                  <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <i class="fas fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium px-2">220kV JARVA: FAT ONLY</span>
                   </li>
-                  <li class="flex items-start">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">77kV FORSMARK</span>
+                  <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <i class="fas fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium px-2">77kV FORSMARK</span>
                   </li>
-                  <li class="flex items-start">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">NUCLEAR POWER PLANT FORSMARK3, POWER LIFT OF UNIT3</span>
+                  <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <i class="fas fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium px-2">NUCLEAR POWER PLANT FORSMARK3, POWER LIFT OF UNIT3</span>
                   </li>
                 </ul>
               </div>
@@ -553,52 +649,74 @@
                 <h4 class="text-xl font-bold mb-6 text-blue-600">ABB Worldwide</h4>
                 <p class="text-gray-600 mb-6">Major ABB projects across multiple continents.</p>
                 <h5 class="text-lg font-semibold mb-4">Projects:</h5>
-                <ul class="space-y-4 text-gray-600">
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">400kV KORMALA - IRAK - COMMISSIONING MANAGEMENT - Guide the commissioning team of the final client, KAR GROUP</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">132kV DREVATTEN - NORWAY</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">400kV ERBIL CCPP - IRAK</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">400kV AMARRA EXTENSION - IRAK: FAT ONLY</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">132kV MGI STEEL - IRAK: FAT ONLY</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">220kV PANAMA2: FAT ONLY</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">220kV ALTO MOLOCUE - MOZAMBIQ: FAT ONLY</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">220kV QUELIMANE - MOZAMBIQ: FAT ONLY</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">220kV CHIMUARA - MOZAMBIQ: FAT ONLY</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">110kV BLACK LION - MOZAMBIQ: FAT ONLY</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">220kV SYNCHRONUS COMPENSATOR, COMMISSIONING OF THE EXCITATION SYSTEM KOLWEZI DRC</span>
-                  </li>
-                </ul>
+                                 <ul class="space-y-3 text-gray-600">
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">400kV KORMALA - IRAK - COMMISSIONING MANAGEMENT - Guide the commissioning team of the final client, KAR GROUP</span>
+                   </li>
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">132kV DREVATTEN - NORWAY</span>
+                   </li>
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">400kV ERBIL CCPP - IRAK</span>
+                   </li>
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">400kV AMARRA EXTENSION - IRAK: FAT ONLY</span>
+                   </li>
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">132kV MGI STEEL - IRAK: FAT ONLY</span>
+                   </li>
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">220kV PANAMA2: FAT ONLY</span>
+                   </li>
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">220kV ALTO MOLOCUE - MOZAMBIQ: FAT ONLY</span>
+                   </li>
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">220kV QUELIMANE - MOZAMBIQ: FAT ONLY</span>
+                   </li>
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">220kV CHIMUARA - MOZAMBIQ: FAT ONLY</span>
+                   </li>
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">110kV BLACK LION - MOZAMBIQ: FAT ONLY</span>
+                   </li>
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">220kV SYNCHRONUS COMPENSATOR, COMMISSIONING OF THE EXCITATION SYSTEM KOLWEZI DRC</span>
+                   </li>
+                 </ul>
               </div>
               <div class="flex items-center justify-center">
                 <img src="assets/images/references/abb_ww.jpg" alt="ABB Worldwide Projects" class="rounded-lg max-w-full h-auto shadow-lg" />
@@ -618,16 +736,20 @@
                 <h4 class="text-xl font-bold mb-6 text-emerald-600">SAE Botswana</h4>
                 <p class="text-gray-600 mb-6">2 major SAE substation projects in Botswana.</p>
                 <h5 class="text-lg font-semibold mb-4">Projects:</h5>
-                <ul class="space-y-4 text-gray-600">
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-emerald-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">400kV s/s MOROPULE A/B</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-emerald-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">400kV s/s POKOJE</span>
-                  </li>
-                </ul>
+                                 <ul class="space-y-3 text-gray-600">
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">400kV s/s MOROPULE A/B</span>
+                   </li>
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">400kV s/s POKOJE</span>
+                   </li>
+                 </ul>
               </div>
             </div>
           </div>
@@ -641,20 +763,26 @@
                 <h4 class="text-xl font-bold mb-6 text-emerald-600">SAE Tanzania</h4>
                 <p class="text-gray-600 mb-6">3 major SAE projects in Tanzania.</p>
                 <h5 class="text-lg font-semibold mb-4">Projects:</h5>
-                <ul class="space-y-4 text-gray-600">
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-emerald-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">132kV s/s FZ2</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-emerald-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">132kV s/s FZ3</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-emerald-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">132kV s/s KIA</span>
-                  </li>
-                </ul>
+                                 <ul class="space-y-3 text-gray-600">
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">132kV s/s FZ2</span>
+                   </li>
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">132kV s/s FZ3</span>
+                   </li>
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">132kV s/s KIA</span>
+                   </li>
+                 </ul>
               </div>
               <div class="flex items-center justify-center">
                 <img src="assets/images/references/sae_tnz.jpg" alt="SAE Tanzania Projects" class="rounded-lg max-w-full h-auto shadow-lg" />
@@ -674,16 +802,20 @@
                 <h4 class="text-xl font-bold mb-6 text-emerald-600">SAE Sierra Leone</h4>
                 <p class="text-gray-600 mb-6">2 major SAE projects in Sierra Leone.</p>
                 <h5 class="text-lg font-semibold mb-4">Projects:</h5>
-                <ul class="space-y-4 text-gray-600">
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-emerald-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">132kV s/s BUMBUNA FALLS</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-emerald-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">132kV s/s KINGTOM</span>
-                  </li>
-                </ul>
+                                 <ul class="space-y-3 text-gray-600">
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">132kV s/s BUMBUNA FALLS</span>
+                   </li>
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">132kV s/s KINGTOM</span>
+                   </li>
+                 </ul>
               </div>
             </div>
           </div>
@@ -697,16 +829,20 @@
                 <h4 class="text-xl font-bold mb-6 text-purple-600">Toshiba Europe</h4>
                 <p class="text-gray-600 mb-6">Toshiba projects across Europe.</p>
                 <h5 class="text-lg font-semibold mb-4">Projects:</h5>
-                <ul class="space-y-4 text-gray-600">
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-purple-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">DC LINK KOTOR (MONTENEGRO) - CEPAGATTI (ITALY): on italian side.</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-purple-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">110/20kV HOGHIZ, ROMANIA</span>
-                  </li>
-                </ul>
+                                 <ul class="space-y-3 text-gray-600">
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">DC LINK KOTOR (MONTENEGRO) - CEPAGATTI (ITALY): on italian side.</span>
+                   </li>
+                   <li class="flex items-center p-3 bg-white/60 rounded-lg backdrop-blur-sm">
+                     <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-sm"></i>
+                     </div>
+                     <span class="text-gray-700 font-medium px-2">110/20kV HOGHIZ, ROMANIA</span>
+                   </li>
+                 </ul>
               </div>
               <div class="flex items-center justify-center">
                 <img src="assets/images/references/toshiba_europe.jpg" alt="Toshiba Europe Projects" class="rounded-lg max-w-full h-auto shadow-lg" />
@@ -715,101 +851,157 @@
           </div>
         </div>
 
-        <!-- Siemens Projects -->
-        <div class="mb-12 wow fadeInUp" data-wow-delay="0.55s">
-          <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border-2 border-green-200 shadow-lg">
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h4 class="text-xl font-bold mb-6 text-green-600">Siemens Projects</h4>
-                <p class="text-gray-600 mb-6">Major Siemens projects across Romania, Sweden, and worldwide locations.</p>
-                <h5 class="text-lg font-semibold mb-4">Romania Projects:</h5>
-                <ul class="space-y-4 text-gray-600 mb-6">
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">220/110kV CETATE</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">220/110kV HASDAT</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">220/110kV BARU MARE</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">110/20kV CAUCIUC</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">110/20kV HOREZU</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">110/20kV ALMAJ</span>
-                  </li>
-                </ul>
-                <h5 class="text-lg font-semibold mb-4">Sweden Projects:</h5>
-                <ul class="space-y-4 text-gray-600 mb-6">
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">400kV SKOGSSATER, CT15 and CT16</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">400kV EKUDDEN</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">110kV MJOHULT</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">400kV TUNA</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">400kV TIMMERSDALA</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">400kV FORSMARK</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">400kV TENHULT</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">400kV GLAN</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">130kV SKEBÄCK</span>
-                  </li>
-                </ul>
-                <h5 class="text-lg font-semibold mb-4">Worldwide Projects:</h5>
-                <ul class="space-y-4 text-gray-600">
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">MAVUZI and CHICAMBA HYDRO POWER PLANTS - MOZAMBIQ</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">110kV MAC ALISTER RD - SINGAPORE</span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-600 mr-4 flex-shrink-0"></i>
-                    <span class="leading-relaxed">110kV POWERPLANTS GIVAT HAMORE AND RAMAT GAVRIEL - ISRAEL</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="flex items-center justify-center">
-                <img src="assets/images/references/siemens.jpg" alt="Siemens Projects" class="rounded-lg max-w-full h-auto shadow-lg" />
-              </div>
-            </div>
-          </div>
-        </div>
+                 <!-- Siemens Projects -->
+         <div class="mb-12 wow fadeInUp" data-wow-delay="0.55s">
+           <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border-2 border-green-200 shadow-lg">
+             <div class="text-center mb-8">
+               <h4 class="text-2xl font-bold mb-4 text-green-600">Siemens Projects</h4>
+               <p class="text-gray-600">Major Siemens projects across Romania, Sweden, and worldwide locations.</p>
+             </div>
+             
+             <div class="grid md:grid-cols-3 gap-6 mb-8">
+               <!-- Romania Projects Column -->
+               <div class="bg-white/40 rounded-xl p-6 backdrop-blur-sm">
+                 <h5 class="text-lg font-semibold mb-4 text-green-700 flex items-center">
+                   <i class=" mr-2"></i>Romania Projects
+                 </h5>
+                 <ul class="space-y-2 text-gray-600">
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">220/110kV CETATE</span>
+                   </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">220/110kV HASDAT</span>
+                   </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">220/110kV BARU MARE</span>
+                   </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">110/20kV CAUCIUC</span>
+                   </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">110/20kV HOREZU</span>
+                   </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">110/20kV ALMAJ</span>
+                   </li>
+                 </ul>
+               </div>
+               
+               <!-- Sweden Projects Column -->
+               <div class="bg-white/40 rounded-xl p-6 backdrop-blur-sm">
+                 <h5 class="text-lg font-semibold mb-4 text-green-700 flex items-center">
+                   <i class="mr-2"></i>Sweden Projects
+                 </h5>
+                 <ul class="space-y-2 text-gray-600">
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">400kV SKOGSSATER, CT15 and CT16</span>
+                   </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">400kV EKUDDEN</span>
+                   </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">110kV MJOHULT</span>
+                   </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">400kV TUNA</span>
+                   </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">400kV TIMMERSDALA</span>
+                   </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">400kV FORSMARK</span>
+                   </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">400kV TENHULT</span>
+                   </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">400kV GLAN</span>
+                   </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">130kV SKEBÄCK</span>
+                   </li>
+                 </ul>
+               </div>
+               
+               <!-- Worldwide Projects Column -->
+               <div class="bg-white/40 rounded-xl p-6 backdrop-blur-sm">
+                 <h5 class="text-lg font-semibold mb-4 text-green-700 flex items-center">
+                   <i class="mr-2"></i>Worldwide Projects
+                 </h5>
+                 <ul class="space-y-2 text-gray-600">
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">MAVUZI and CHICAMBA HYDRO POWER PLANTS - MOZAMBIQ</span>
+                   </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">110kV MAC ALISTER RD - SINGAPORE</span>
+                   </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                     <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                       <i class="fas fa-check text-green-600 text-xs"></i>
+                     </div>
+                     <span class="text-gray-700 text-sm">110kV POWERPLANTS GIVAT HAMORE AND RAMAT GAVRIEL - ISRAEL</span>
+                   </li>
+                 </ul>
+               </div>
+             </div>
+             
+             <!-- Siemens Image at the bottom -->
+             <div class="text-center">
+               <img src="assets/images/references/siemens.jpg" alt="Siemens Projects" class="rounded-lg max-w-md h-auto shadow-lg mx-auto" />
+             </div>
+           </div>
+         </div>
       </div>
     </section>
 
