@@ -1155,6 +1155,12 @@
                      </div>
                      <span class="text-gray-700 text-sm">110kV POWERPLANTS GIVAT HAMORE AND RAMAT GAVRIEL - ISRAEL</span>
                    </li>
+                   <li class="flex items-center p-2 bg-white/60 rounded-lg">
+                    <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                      <i class="fas fa-check text-green-600 text-xs"></i>
+                    </div>
+                    <span class="text-gray-700 text-sm">400kV LOYANGALANI - FRANCE</span>
+                  </li>
                  </ul>
                </div>
              </div>
@@ -1265,25 +1271,28 @@
     <script>
       // Initialize world map with project locations
       document.addEventListener('DOMContentLoaded', function() {
-        // Project locations data
-        const projectLocations = [
-          { name: "Qatar - ABB Phase VII", lat: 25.2854, lng: 51.5310, type: "ABB", description: "400kV & 220kV substations" },
-          { name: "DR Congo - ABB Projects", lat: -4.2634, lng: 15.2429, type: "ABB", description: "220kV substations" },
-          { name: "Tunisia - Ansaldo Projects", lat: 36.8065, lng: 10.1815, type: "Ansaldo", description: "220kV & 90kV substations" },
-          { name: "Sweden - ABB & Siemens", lat: 62.0000, lng: 15.0000, type: "Mixed", description: "400kV & nuclear power plants" },
-          { name: "Iraq - ABB Projects", lat: 33.2232, lng: 43.6793, type: "ABB", description: "400kV & 132kV projects" },
-          { name: "Norway - ABB Projects", lat: 60.3913, lng: 5.3221, type: "ABB", description: "132kV projects" },
-          { name: "Panama - ABB Projects", lat: 8.5380, lng: -80.7821, type: "ABB", description: "220kV projects" },
-          { name: "Mozambique - ABB Projects", lat: -18.6657, lng: 35.5296, type: "ABB", description: "220kV & 110kV projects" },
-          { name: "Botswana - SAE Projects", lat: -22.3285, lng: 24.6849, type: "SAE", description: "400kV substations" },
-          { name: "Tanzania - SAE Projects", lat: -6.1730, lng: 35.7389, type: "SAE", description: "132kV substations" },
-          { name: "Sierra Leone - SAE Projects", lat: 8.4606, lng: -11.7799, type: "SAE", description: "132kV substations" },
-          { name: "Montenegro - Toshiba DC Link", lat: 42.4304, lng: 19.2594, type: "Toshiba", description: "DC Link project" },
-          { name: "Romania - Siemens Projects", lat: 45.9432, lng: 24.9668, type: "Siemens", description: "220kV & 110kV substations" },
-          { name: "Singapore - Siemens Projects", lat: 1.3521, lng: 103.8198, type: "Siemens", description: "110kV projects" },
-          { name: "Israel - Siemens Projects", lat: 31.7683, lng: 35.2137, type: "Siemens", description: "110kV power plants" },
-          { name: "Algeria - Toshiba Projects", lat: 28.0339, lng: 1.6596, type: "Toshiba", description: "132kV mobile substations" }
-        ];
+                 // Project locations data
+         const projectLocations = [
+           { name: "Qatar - ABB Phase VII", lat: 25.2854, lng: 51.5310, type: "ABB", description: "400kV & 220kV substations" },
+           { name: "DR Congo - ABB Projects", lat: -4.2634, lng: 15.2429, type: "ABB", description: "220kV substations" },
+           { name: "Tunisia - Ansaldo Projects", lat: 36.8065, lng: 10.1815, type: "Ansaldo", description: "220kV & 90kV substations" },
+           { name: "Sweden - ABB & Siemens", lat: 62.0000, lng: 15.0000, type: "Mixed", description: "400kV & nuclear power plants" },
+           { name: "Iraq - ABB Projects", lat: 33.2232, lng: 43.6793, type: "ABB", description: "400kV & 132kV projects" },
+           { name: "Norway - ABB Projects", lat: 60.3913, lng: 5.3221, type: "ABB", description: "132kV projects" },
+           { name: "Panama - ABB Projects", lat: 8.5380, lng: -80.7821, type: "ABB", description: "220kV projects" },
+           { name: "Mozambique - ABB Projects", lat: -18.6657, lng: 35.5296, type: "ABB", description: "220kV & 110kV projects" },
+           { name: "Botswana - SAE Projects", lat: -22.3285, lng: 24.6849, type: "SAE", description: "400kV substations" },
+           { name: "Tanzania - SAE Projects", lat: -6.1730, lng: 35.7389, type: "SAE", description: "132kV substations" },
+           { name: "Sierra Leone - SAE Projects", lat: 8.4606, lng: -11.7799, type: "SAE", description: "132kV substations" },
+           { name: "Montenegro - Toshiba DC Link", lat: 42.4304, lng: 19.2594, type: "Toshiba", description: "DC Link project" },
+           { name: "Romania - Siemens Projects", lat: 45.9432, lng: 24.9668, type: "Siemens", description: "220kV & 110kV substations" },
+           { name: "Singapore - Siemens Projects", lat: 1.3521, lng: 103.8198, type: "Siemens", description: "110kV projects" },
+           { name: "Israel - Siemens Projects", lat: 31.7683, lng: 35.2137, type: "Siemens", description: "110kV power plants" },
+           { name: "Algeria - Toshiba Projects", lat: 28.0339, lng: 1.6596, type: "Toshiba", description: "132kV mobile substations" },
+           { name: "Morocco - ABB Projects", lat: 31.7917, lng: -7.0926, type: "ABB", description: "High-voltage substations" },
+           { name: "France - Siemens Projects", lat: 46.2276, lng: 2.2137, type: "Siemens", description: "FAT 400kv" },
+           { name: "Italy - Toshiba DC Link", lat: 41.8719, lng: 12.5674, type: "Toshiba", description: "DC Link project (Italian side)" }
+         ];
 
         // Initialize map
         const map = L.map('world-map').setView([20, 0], 2);
