@@ -32,10 +32,22 @@
           </div>
           
           <div class="hidden md:flex items-center space-x-8">
-            <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">About</a>
-            <a href="#services" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">Services</a>
-            <a href="#projects" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">Projects</a>
-            <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors duration-200">Contact</a>
+            <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-200 relative group">
+              About
+              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#services" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-200 relative group">
+              Services
+              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#projects" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-200 relative group">
+              Projects
+              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 transition-all duration-200 relative group">
+              Contact
+              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+            </a>
           </div>
           
           <div class="md:hidden">
@@ -44,6 +56,11 @@
             </button>
           </div>
         </div>
+      </div>
+      
+      <!-- Progress bar -->
+      <div class="h-1 bg-gray-200">
+        <div id="scroll-progress" class="h-full bg-gradient-to-r from-blue-500 to-blue-600 transition-all duration-300" style="width: 0%"></div>
       </div>
       
       <!-- Mobile menu -->
@@ -62,29 +79,53 @@
       <div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600"></div>
       <div class="absolute inset-0 bg-black/20"></div>
       
+      <!-- Enhanced floating background elements -->
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute top-20 left-10 w-20 h-20 bg-blue-400/20 rounded-full animate-pulse"></div>
+        <div class="absolute top-40 right-20 w-16 h-16 bg-blue-300/20 rounded-full animate-pulse delay-1000"></div>
+        <div class="absolute bottom-20 left-1/4 w-12 h-12 bg-blue-500/20 rounded-full animate-pulse delay-2000"></div>
+        
+        <!-- New floating geometric shapes -->
+        <div class="absolute top-32 left-1/3 w-8 h-8 bg-blue-300/30 rotate-45 animate-bounce delay-500"></div>
+        <div class="absolute top-64 right-1/4 w-6 h-6 bg-blue-400/25 rounded-full animate-ping delay-1500"></div>
+        <div class="absolute bottom-32 right-1/3 w-10 h-10 bg-blue-200/20 rotate-12 animate-pulse delay-3000"></div>
+        <div class="absolute top-1/2 left-20 w-4 h-4 bg-blue-300/40 rounded-full animate-bounce delay-2000"></div>
+      </div>
+      
       <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
         <h1 class="text-5xl md:text-7xl font-bold mb-6 wow fadeInUp" data-wow-delay="0.2s">
           Global Engineering
           <span class="block text-blue-200">Excellence</span>
         </h1>
+        
+        <!-- Company tagline -->
+        <p class="text-lg md:text-xl mb-4 text-blue-100 wow fadeInUp" data-wow-delay="0.3s">
+          <i class="fas fa-star text-yellow-300 mr-2"></i>
+          Trusted by leading power companies worldwide
+        </p>
+        
         <p class="text-xl md:text-2xl mb-8 text-blue-100 wow fadeInUp" data-wow-delay="0.4s">
           Specialized in protection systems, transmission & distribution, and commissioning worldwide
         </p>
+        
         <div class="flex flex-col sm:flex-row gap-4 justify-center wow fadeInUp" data-wow-delay="0.6s">
-          <a href="#projects" class="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105">
+          <a href="#projects" class="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
             <i class="fas fa-globe mr-2"></i>View Our Projects
           </a>
-          <a href="#contact" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-all duration-300 transform hover:scale-105">
+          <a href="#contact" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
             <i class="fas fa-envelope mr-2"></i>Get In Touch
           </a>
         </div>
       </div>
       
-      <!-- Animated background elements -->
-      <div class="absolute inset-0 overflow-hidden">
-        <div class="absolute top-20 left-10 w-20 h-20 bg-blue-400/20 rounded-full animate-pulse"></div>
-        <div class="absolute top-40 right-20 w-16 h-16 bg-blue-300/20 rounded-full animate-pulse delay-1000"></div>
-        <div class="absolute bottom-20 left-1/4 w-12 h-12 bg-blue-500/20 rounded-full animate-pulse delay-2000"></div>
+      <!-- Scroll down indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 wow fadeInUp" data-wow-delay="1s">
+        <div class="flex flex-col items-center text-white/80 hover:text-white transition-colors duration-300 cursor-pointer group" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+          <span class="text-sm mb-2 group-hover:scale-110 transition-transform duration-300">Scroll Down</span>
+          <div class="w-6 h-10 border-2 border-white/60 rounded-full flex justify-center">
+            <div class="w-1 h-3 bg-white/60 rounded-full mt-2 animate-bounce"></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -162,6 +203,58 @@
             </div>
             <h3 class="text-xl font-bold text-gray-900 mb-3">Engineering Excellence</h3>
             <p class="text-gray-600">Built as a group of engineers aiming to meet challenges on the international commissioning market.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Facts Section -->
+    <section class="py-16 bg-gradient-to-r from-gray-50 to-blue-50 border-b-4 border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 wow fadeInUp">
+            Why Choose SMCE GROUP T&D?
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto wow fadeInUp" data-wow-delay="0.2s">
+            Our track record speaks for itself - delivering excellence across continents
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="text-center group wow fadeInUp" data-wow-delay="0.1s">
+            <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-xl">
+              <i class="fas fa-globe text-white text-3xl"></i>
+            </div>
+            <div class="text-3xl font-bold text-blue-600 mb-2 group-hover:text-blue-700 transition-colors duration-300">15+</div>
+            <div class="text-gray-700 font-semibold">Countries Served</div>
+            <div class="text-sm text-gray-500 mt-1">Across 5 continents</div>
+          </div>
+          
+          <div class="text-center group wow fadeInUp" data-wow-delay="0.2s">
+            <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-xl">
+              <i class="fas fa-bolt text-white text-3xl"></i>
+            </div>
+            <div class="text-3xl font-bold text-green-600 mb-2 group-hover:text-green-700 transition-colors duration-300">60+</div>
+            <div class="text-gray-700 font-semibold">Projects Completed</div>
+            <div class="text-sm text-gray-500 mt-1">High-voltage substations</div>
+          </div>
+          
+          <div class="text-center group wow fadeInUp" data-wow-delay="0.3s">
+            <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-xl">
+              <i class="fas fa-clock text-white text-3xl"></i>
+            </div>
+            <div class="text-3xl font-bold text-purple-600 mb-2 group-hover:text-purple-700 transition-colors duration-300">15</div>
+            <div class="text-gray-700 font-semibold">Years Experience</div>
+            <div class="text-sm text-gray-500 mt-1">Since 2008</div>
+          </div>
+          
+          <div class="text-center group wow fadeInUp" data-wow-delay="0.4s">
+            <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-xl">
+              <i class="fas fa-shield-alt text-white text-3xl"></i>
+            </div>
+            <div class="text-3xl font-bold text-orange-600 mb-2 group-hover:text-orange-700 transition-colors duration-300">100%</div>
+            <div class="text-gray-700 font-semibold">Safety Record</div>
+            <div class="text-sm text-gray-500 mt-1">Zero incidents</div>
           </div>
         </div>
       </div>
@@ -287,64 +380,44 @@
         <div class="bg-gray-100 rounded-2xl p-4 mb-12 wow fadeInUp" data-wow-delay="0.4s">
           <div id="world-map" class="h-96 md:h-[600px] rounded-xl overflow-hidden"></div>
         </div>
-        
-        <!-- Project Statistics -->
-        <div class="grid md:grid-cols-4 gap-8 mb-12">
-          <div class="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl border-2 border-blue-200 shadow-lg wow fadeInUp" data-wow-delay="0.1s">
-            <div class="text-4xl font-bold text-blue-600 mb-2">60+</div>
-            <div class="text-gray-600 font-semibold">Projects Completed</div>
-          </div>
-          <div class="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl border-2 border-green-200 shadow-lg wow fadeInUp" data-wow-delay="0.2s">
-            <div class="text-4xl font-bold text-green-600 mb-2">15</div>
-            <div class="text-gray-600 font-semibold">Years Experience</div>
-          </div>
-          <div class="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl border-2 border-purple-200 shadow-lg wow fadeInUp" data-wow-delay="0.3s">
-            <div class="text-4xl font-bold text-purple-600 mb-2">15+</div>
-            <div class="text-gray-600 font-semibold">Countries Served</div>
-          </div>
-          <div class="text-center p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl border-2 border-orange-200 shadow-lg wow fadeInUp" data-wow-delay="0.4s">
-            <div class="text-4xl font-bold text-orange-600 mb-2">100%</div>
-            <div class="text-gray-600 font-semibold">Client Satisfaction</div>
-          </div>
-        </div>
 
         <!-- ABB Qatar Projects -->
         <div class="mb-12 wow fadeInUp" data-wow-delay="0.1s">
-          <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border-2 border-blue-200 shadow-lg">
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border-2 border-blue-200 shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-500 transform group">
             <div class="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h4 class="text-xl font-bold mb-6 text-blue-600">ABB Qatar Phase VII</h4>
+                <h4 class="text-xl font-bold mb-6 text-blue-600 group-hover:text-blue-700 transition-colors duration-300">ABB Qatar Phase VII</h4>
                 <p class="text-gray-600 mb-6">Major ABB Phase VII projects including 6 substations across Qatar.</p>
                 <h5 class="text-lg font-semibold mb-4">Projects:</h5>
                 <ul class="space-y-4 text-gray-600">
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
+                  <li class="flex items-center group/item hover:bg-blue-50 p-2 rounded-lg transition-all duration-200">
+                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-200"></i>
                     <span class="leading-relaxed">400kV s/s ABU NAKHLA SUPER</span>
                   </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
+                  <li class="flex items-center group/item hover:bg-blue-50 p-2 rounded-lg transition-all duration-200">
+                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-200"></i>
                     <span class="leading-relaxed">400kV s/s DUCAN ROAD SUPER</span>
                   </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
+                  <li class="flex items-center group/item hover:bg-blue-50 p-2 rounded-lg transition-all duration-200">
+                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-200"></i>
                     <span class="leading-relaxed">220kV s/s DOHA SOUTH SUPER (DSS)</span>
                   </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
+                  <li class="flex items-center group/item hover:bg-blue-50 p-2 rounded-lg transition-all duration-200">
+                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-200"></i>
                     <span class="leading-relaxed">220kV s/s DOHA NORTH SUPER (DNS)</span>
                   </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
+                  <li class="flex items-center group/item hover:bg-blue-50 p-2 rounded-lg transition-all duration-200">
+                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-200"></i>
                     <span class="leading-relaxed">220kV s/s RAS LAFFAN</span>
                   </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0"></i>
+                  <li class="flex items-center group/item hover:bg-blue-50 p-2 rounded-lg transition-all duration-200">
+                    <i class="fas fa-check-circle text-blue-600 mr-4 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-200"></i>
                     <span class="leading-relaxed">110kV TRANSFORMERS PROTECTION TEST ON SHELL INDUSTRIAL PLANT, RAS LAFFAN</span>
                   </li>
                 </ul>
               </div>
               <div class="flex items-center justify-center">
-                <img src="assets/images/references/abb_qatar.jpg" alt="ABB Qatar Projects" class="rounded-lg max-w-full h-auto shadow-lg" />
+                <img src="assets/images/references/abb_qatar.jpg" alt="ABB Qatar Projects" class="rounded-lg max-w-full h-auto shadow-lg group-hover:shadow-2xl transition-all duration-500" />
               </div>
             </div>
           </div>
@@ -903,23 +976,72 @@
         }
       });
 
+      // Enhanced navigation functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section[id]');
+        const progressBar = document.getElementById('scroll-progress');
+
+        // Update active navigation link
+        function updateActiveNavLink() {
+          const scrollPos = window.scrollY + 100;
+          
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+            
+            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+              navLinks.forEach(link => {
+                link.classList.remove('text-blue-600', 'font-semibold');
+                link.classList.add('text-gray-700');
+              });
+              
+              const activeLink = document.querySelector(`[href="#${sectionId}"]`);
+              if (activeLink) {
+                activeLink.classList.remove('text-gray-700');
+                activeLink.classList.add('text-blue-600', 'font-semibold');
+              }
+            }
+          });
+        }
+
+        // Update progress bar
+        function updateProgressBar() {
+          const scrollTop = window.pageYOffset;
+          const docHeight = document.body.scrollHeight - window.innerHeight;
+          const scrollPercent = (scrollTop / docHeight) * 100;
+          progressBar.style.width = scrollPercent + '%';
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+              target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          });
+        });
+
+        // Event listeners
+        window.addEventListener('scroll', () => {
+          updateActiveNavLink();
+          updateProgressBar();
+        });
+
+        // Initialize
+        updateActiveNavLink();
+        updateProgressBar();
+      });
+
       // Mobile menu toggle
       document.getElementById('mobile-menu-button').addEventListener('click', function() {
         document.getElementById('mobile-menu').classList.toggle('hidden');
-      });
-
-      // Smooth scrolling for navigation links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }
-        });
       });
 
       // Back to top button
