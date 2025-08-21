@@ -29,33 +29,33 @@
         max-width: 100%;
       }
       
-      @keyframes currentFlow {
-        0% { transform: translateX(-100px); opacity: 0; }
-        10% { opacity: 0.8; }
-        90% { opacity: 0.8; }
-        100% { transform: translateX(100%); opacity: 0; }
-      }
-      
-      @keyframes currentFlowReverse {
-        0% { transform: translateX(100%); opacity: 0; }
-        10% { opacity: 0.8; }
-        90% { opacity: 0.8; }
-        100% { transform: translateX(-100px); opacity: 0; }
-      }
-      
-      @keyframes currentFlowDown {
-        0% { transform: translateY(-100px); opacity: 0; }
-        10% { opacity: 0.8; }
-        90% { opacity: 0.8; }
-        100% { transform: translateY(100%); opacity: 0; }
-      }
-      
-      @keyframes currentFlowUp {
-        0% { transform: translateY(100%); opacity: 0; }
-        10% { opacity: 0.8; }
-        90% { opacity: 0.8; }
-        100% { transform: translateY(-100px); opacity: 0; }
-      }
+             @keyframes currentFlow {
+         0% { transform: translateX(-100px); opacity: 0; }
+         10% { opacity: 0.8; }
+         90% { opacity: 0.8; }
+         100% { transform: translateX(calc(100vw + 100px)); opacity: 0; }
+       }
+       
+       @keyframes currentFlowReverse {
+         0% { transform: translateX(calc(100vw + 100px)); opacity: 0; }
+         10% { opacity: 0.8; }
+         90% { opacity: 0.8; }
+         100% { transform: translateX(-100px); opacity: 0; }
+       }
+       
+       @keyframes currentFlowDown {
+         0% { transform: translateY(-100px); opacity: 0; }
+         10% { opacity: 0.8; }
+         90% { opacity: 0.8; }
+         100% { transform: translateY(calc(100vh + 100px)); opacity: 0; }
+       }
+       
+       @keyframes currentFlowUp {
+         0% { transform: translateY(calc(100vh + 100px)); opacity: 0; }
+         10% { opacity: 0.8; }
+         90% { opacity: 0.8; }
+         100% { transform: translateY(-100px); opacity: 0; }
+       }
       
       @keyframes voltageWave {
         0%, 100% { opacity: 0.3; transform: scaleX(1); }
